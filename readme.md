@@ -12,7 +12,7 @@ Ling Electron Boilerplate
 
 ## Как использовать?
 ```shell
-git clone https://github.com/DiegoLing33/leb.git
+git clone https://github.com/DiegoLing33/LEB.git
 
 cd leb
 
