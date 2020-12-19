@@ -1,0 +1,24 @@
+{
+  "name": "billsmail",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@ling.black/log": "^1.0.0",
+    "electron": "^11.1.0",
+    "electron-builder": "~22.9.1",
+    "electron-reload": "^1.5.0",
+    "node-sass": "^5.0.0",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "style:build": "node-sass --source-map true ./client/style/style.scss > ./client/style/style.css",
+    "style:watch": "node-sass --watch --recursive --source-map true ./client/style/style.scss ./client/style/style.css",
+    "src:build": "tsc",
+    "src:watch": "tsc -w",
+    "start": "yarn src:build && electron .",
+    "pack:osx": "electron-builder --mac",
+    "pack:win64": "electron-builder --win",
+    "dev": "node starter.js dev"
+  }
+}
