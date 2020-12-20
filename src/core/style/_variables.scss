@@ -1,4 +1,4 @@
-/*
+/*!
  * ██╗░░░░░██╗███╗░░██╗░██████╗░░░░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
  * ██║░░░░░██║████╗░██║██╔════╝░░░░██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
  * ██║░░░░░██║██╔██╗██║██║░░██╗░░░░██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
@@ -10,30 +10,37 @@
  * @site http://ling.black
  */
 
-import {View} from "./core/dom";
-import {TextView} from "./core/text";
-import ImageView from "./core/image";
+$primary-color: #0dcaf0;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$success-color: #198754;
+$secondary-color: #6c757d;
 
-// Styles
-import "./style/style.scss";
-import "./core/style/index.scss";
+$t_color: '#ffffff';
+$variants: 'primary', 'danger', 'warning', 'success', 'secondary';
 
-// Images
-import leb from "./assets/leb.png";
-import Button from "./core/button";
-import {XFlex} from "./core/layout/Flex";
+$colors: (
+        'primary': $primary-color,
+        'danger': $danger-color,
+        'warning': $warning-color,
+        "success": $success-color,
+        "secondary": $secondary-color,
+);
 
+$sizes: 'none' , 'small' , 'middle' , 'large';
 
-const $wrapper = View.withId("wrapper");
+$paddings: (
+  'none': 0, 'small': 8px, 'middle': 16px, 'large': 32px
+);
 
-// Components
-const image = new ImageView().setImageSource(leb).setWidth(100).setHeight(100);
-const headerText = TextView.Header().setText("Hello, world!");
-const text = new TextView().setText("I created with LEB and XView light-weight framework!");
-const button = new Button("Click me");
-const buttonSuccess = new Button("Click me").setVariant("success");
-
-const buttons = XFlex().setItemsPadding('middle');
-buttons.addSubView(button, buttonSuccess);
-
-$wrapper.addSubView(image, headerText, text, buttons);
+@each $key, $color in $colors {
+  .bg-#{$key}{
+    background-color: $color !important;
+  }
+  .text-#{$key}{
+    color: $color !important;
+  }
+  .border-#{$key}{
+    border-color: $color !important;
+  }
+}

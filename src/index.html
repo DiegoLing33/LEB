@@ -17,15 +17,14 @@
     <title>Application</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<div class="app-frame-bar">
-    <div class="app-frame-title">My app</div>
+<div class="app-frame-wrapper">
+    <div class="app-frame-bar">
+        <div class="app-frame-title">My app</div>
+    </div>
+    <div class="wrapper" id="wrapper"></div>
 </div>
-<div class="wrapper">
-    <div>Hello World!</div>
-</div>
-<script src="../dist/index.js"></script>
+<script src="../dist/bundle.js"></script>
 </body>
 </html>

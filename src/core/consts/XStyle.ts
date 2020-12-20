@@ -1,4 +1,4 @@
-/*!
+/*
  * ██╗░░░░░██╗███╗░░██╗░██████╗░░░░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
  * ██║░░░░░██║████╗░██║██╔════╝░░░░██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
  * ██║░░░░░██║██╔██╗██║██║░░██╗░░░░██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
@@ -10,29 +10,5 @@
  * @site http://ling.black
  */
 
-html, body{
-  width: 100%;
-  height: 100%;
-}
-
-// Height fix
-webview {
-  display: block;   /* iframes are inline by default */
-  border: none;     /* Reset default border */
-  height: 80vh;     /* Viewport-relative units */
-  width: 95vw;
-}
-
-.app-frame-bar{
-  display: flex;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
-
-  -webkit-user-select: none;
-  -webkit-app-region: drag;
-}
-
-.app-frame-title{
-
-}
+export type XVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondary';
+export type XSizes = 'none' | 'small' | 'middle' | 'large';

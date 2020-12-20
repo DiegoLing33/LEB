@@ -25,7 +25,7 @@ function createWindow() {
         }
     })
 
-    win.loadFile(path.resolve(__dirname, 'client/index.html')).then(() => {
+    win.loadFile(path.resolve(__dirname, 'src/index.html')).then(() => {
         // Application logic is here
     });
 }

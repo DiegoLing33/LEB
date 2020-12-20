@@ -10,8 +10,11 @@
  * @site http://ling.black
  */
 
-// First - normalizing
-@import "./extra/normalize";
-@import "fonts";
-@import "frame";
-@import "app";
+@import "variables";
+@import "mixins";
+
+// Layout
+@import "layout/layout";
+
+// Components
+@import "components/button";

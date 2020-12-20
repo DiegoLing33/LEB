@@ -1,4 +1,4 @@
-/*
+/*!
  * ██╗░░░░░██╗███╗░░██╗░██████╗░░░░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
  * ██║░░░░░██║████╗░██║██╔════╝░░░░██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
  * ██║░░░░░██║██╔██╗██║██║░░██╗░░░░██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
@@ -10,30 +10,36 @@
  * @site http://ling.black
  */
 
-import {View} from "./core/dom";
-import {TextView} from "./core/text";
-import ImageView from "./core/image";
+html, body{
+  width: 100%;
+  height: 100%;
+}
 
-// Styles
-import "./style/style.scss";
-import "./core/style/index.scss";
+// Height fix
+webview {
+  display: block;   /* iframes are inline by default */
+  border: none;     /* Reset default border */
+  height: 80vh;     /* Viewport-relative units */
+  width: 95vw;
+}
 
-// Images
-import leb from "./assets/leb.png";
-import Button from "./core/button";
-import {XFlex} from "./core/layout/Flex";
+.app-frame-bar{
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
 
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
 
-const $wrapper = View.withId("wrapper");
+.app-frame-title{
 
-// Components
-const image = new ImageView().setImageSource(leb).setWidth(100).setHeight(100);
-const headerText = TextView.Header().setText("Hello, world!");
-const text = new TextView().setText("I created with LEB and XView light-weight framework!");
-const button = new Button("Click me");
-const buttonSuccess = new Button("Click me").setVariant("success");
+}
 
-const buttons = XFlex().setItemsPadding('middle');
-buttons.addSubView(button, buttonSuccess);
-
-$wrapper.addSubView(image, headerText, text, buttons);
+.app-frame-wrapper{
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
