@@ -1,4 +1,4 @@
-# LEB 
+# LEB <span style='color: cyan'>2</span>
 Ling Electron Boilerplate
 
 ## Описание
@@ -7,14 +7,14 @@ Ling Electron Boilerplate
 ## Почему LEB?
 1. Контент приложения обновляется при изменении кода сам. Допишите что-то в index.html - содержимое обновится!
 2. Решена проблема с высотой приложения в CSS - никакого resize костыля!
-3. Полная поддержка SCSS и TS
+3. Полная поддержка SCSS и TS из коробки
 4. Скрипт: `yarn dev`
 
 ## Как использовать?
 ```shell
 git clone https://github.com/DiegoLing33/LEB.git
 
-cd leb
+cd LEB
 
 yarn
 
@@ -22,10 +22,6 @@ yarn dev
 ```
 
 После установки будут доступны команды:
-- `yarn style:build` - сборка scss стилей в css
-- `yarn style:watch` - сборка scss стилей в css в реальном времени
-  
-
 - `yarn src:build` - сборка src из typescript в js
 - `yarn src:watch` - сборка src из typescript в js в реальном времени
 

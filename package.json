@@ -1,6 +1,6 @@
 {
-  "name": "billsmail",
-  "version": "1.0.0",
+  "name": "@ling.black/leb",
+  "version": "2.0.0",
   "main": "index.ts",
   "license": "MIT",
   "dependencies": {
@@ -19,11 +19,9 @@
     "webpack": "^5.11.0"
   },
   "scripts": {
-    "style:build": "node-sass --source-map true src/style/style.scss > ./client/style/style.css",
-    "style:watch": "node-sass --watch --recursive --source-map true src/style/style.scss ./client/style/style.css",
     "src:build": "webpack",
-    "src:watch": "tsc -w",
-    "start": "electron .",
+    "src:watch": "webpack -w",
+    "start": "webpack && electron .",
     "pack:osx": "electron-builder --mac",
     "pack:win64": "electron-builder --win",
     "dev": "node starter.js dev"

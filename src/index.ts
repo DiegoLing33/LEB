@@ -10,30 +10,27 @@
  * @site http://ling.black
  */
 
-import {View} from "./core/dom";
-import {TextView} from "./core/text";
-import ImageView from "./core/image";
-
 // Styles
 import "./style/style.scss";
-import "./core/style/index.scss";
 
 // Images
 import leb from "./assets/leb.png";
-import Button from "./core/button";
-import {XFlex} from "./core/layout/Flex";
 
+// Wrapper
+const $wrapper = document.getElementById("wrapper") as HTMLElement;
 
-const $wrapper = View.withId("wrapper");
+// Image
+const $img = document.createElement("img");
+$img.src = leb;
+$img.width = 150;
+$img.height = 150;
+$wrapper.append($img);
 
-// Components
-const image = new ImageView().setImageSource(leb).setWidth(100).setHeight(100);
-const headerText = TextView.Header().setText("Hello, world!");
-const text = new TextView().setText("I created with LEB and XView light-weight framework!");
-const button = new Button("Click me");
-const buttonSuccess = new Button("Click me").setVariant("success");
+// H1
+const $h1 = document.createElement("h1");
+$h1.innerText = "Hello, world!";
+$wrapper.append($h1);
 
-const buttons = XFlex().setItemsPadding('middle');
-buttons.addSubView(button, buttonSuccess);
-
-$wrapper.addSubView(image, headerText, text, buttons);
+const $div = document.createElement("div");
+$div.innerText = "I created with LEB and I feel me good!";
+$wrapper.append($div);

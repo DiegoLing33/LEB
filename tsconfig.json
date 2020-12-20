@@ -10,7 +10,8 @@
     "moduleResolution": "node"
   },
   "include": [
-    "src"
+    "src",
+    "src/leb.d.ts"
   ],
   "exclude": [
     "node_modules"

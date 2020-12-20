@@ -25,6 +25,5 @@ function createProcess(process, name){
 
 if(args.includes('dev')){
     createProcess(child_process.spawn("yarn", ['start']), LType.info("Electron"));
-    createProcess(child_process.spawn("yarn", ['style:watch']), LType.warning("Style"));
     createProcess(child_process.spawn("yarn", ['src:watch']),  LType.danger("Sources"));
 }
