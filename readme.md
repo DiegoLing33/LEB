@@ -1,6 +1,8 @@
 # LEB <span style='color: cyan'>2</span>
 Ling Electron Boilerplate
 
+<img src="https://github.com/DiegoLing33/LEB/blob/master/src/assets/leb.png?raw=true" width="200" height="200" />
+
 ## Описание
 Простой бойлерплейт электрона. Включает в себя `scss` и `typescript`. Все сконфигурировано по минимальному - простому.
 
@@ -34,3 +36,5 @@ yarn dev
 
 - - -
 - `yarn dev` - запускает все необходимое, для комфортной разработки
+
+<img src="https://github.com/DiegoLing33/LEB/blob/master/snap0.png?raw=true" />
